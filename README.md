@@ -47,7 +47,7 @@ PopupDialog is available through [CocoaPods](http://cocoapods.org). Simply add t
 use_frameworks!
 
 target '<Your Target Name>'
-pod 'PopupDialog', '~> 1.1'
+pod 'PopupDialog', :git => 'https://github.com/hectorhm98/PopupDialog.git', :branch => 'master'
 ```
 
 ## Carthage
@@ -118,6 +118,7 @@ PopupDialog is a subclass of UIViewController and as such can be added to your v
 public convenience init(
     title: String?,
     message: String?,
+    messageBold: NSMutableAttributedString?,
     image: UIImage? = nil,
     buttonAlignment: UILayoutConstraintAxis = .vertical,
     transitionStyle: PopupDialogTransitionStyle = .bounceUp,
