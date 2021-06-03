@@ -93,6 +93,7 @@ final public class PopupDialog: UIViewController {
     @objc public convenience init(
                 title: String?,
                 message: String?,
+                messageBold: NSMutableAttributedString?,
                 image: UIImage? = nil,
                 buttonAlignment: NSLayoutConstraint.Axis = .vertical,
                 transitionStyle: PopupDialogTransitionStyle = .bounceUp,
@@ -105,7 +106,12 @@ final public class PopupDialog: UIViewController {
         // Create and configure the standard popup dialog view
         let viewController = PopupDialogDefaultViewController()
         viewController.titleText   = title
-        viewController.messageText = message
+        if(messageBold != nil) {
+            viewController.AtributedmessageText = messageBold
+        }
+        else {
+            viewController.messageText = message
+        }
         viewController.image       = image
 
         // Call designated initializer

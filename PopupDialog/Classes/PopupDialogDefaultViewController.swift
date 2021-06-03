@@ -69,6 +69,14 @@ public extension PopupDialogDefaultViewController {
             standardView.pv_layoutIfNeededAnimated()
         }
     }
+    
+    var AtributedmessageText: NSAttributedString? {
+        get { return standardView.messageLabel.attributedText }
+        set {
+            standardView.messageLabel.attributedText = newValue
+            standardView.pv_layoutIfNeededAnimated()
+        }
+    }
 
     // MARK: Appearance
 
